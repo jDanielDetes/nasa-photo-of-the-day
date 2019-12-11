@@ -1,18 +1,15 @@
-import React from 'react'
+import React from "react";
 
+const MainImgHolder = props => {
+  return (
+    <div>
+      <h1>NASA Photo of the day!</h1>
+      <h2>Title: {props.title}</h2>
+      <h3>Date:{props.date}</h3>
+      <img src={props.url} alt="" />
+      <p>{props.explanation}</p>
+    </div>
+  );
+};
 
-const MainImgHolder = (props) => {
-    return (
-       <div>
-           <h1>NASA Photo of the day!</h1>
-            <h2>Title: {}</h2>
-            
-
-
-
-
-       </div>
-    )
-}
-
-export default MainImgHolder
+export default MainImgHolder;

@@ -21,8 +21,18 @@ export default function ImageData() {
     return (
         <div>
             
+           
+
+                    <MainImgHolder
+                    title={images.title}
+                    date={images.date}
+                    url={images.url}
+                    explanation={images.explanation}
+                    />
+                
+            
         </div>
     )
+            
 }
 
-{/* date, explanation, title, url*/ }
