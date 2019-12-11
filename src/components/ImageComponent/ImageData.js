@@ -7,8 +7,16 @@ export default function ImageData() {
     const[images,setImages] = useState([])
 
     useEffect(() =>{
-        axios.get(``)
+        axios.get(`https://api.nasa.gov/planetary/apod?api_key=aVbY5Nw2H3iukqybnnYA8ejf8ut7h6XwUr3Tfn0i`)
+    
+    .then(response =>{
+        console.log(response)
+        setImages(response.data)
     })
+    .catch(error => {
+        console.log("the data was not returned", error)
+    })
+},[])
 
     return (
         <div>
@@ -16,3 +24,5 @@ export default function ImageData() {
         </div>
     )
 }
+
+{/* date, explanation, title, url*/ }
